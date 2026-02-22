@@ -71,6 +71,14 @@ El predominio norteamericano existe, pero es menos abrumador que en otras áreas
 ├── 📓 analisis_bibliometrico_completo.ipynb   ← análisis y visualizaciones
 ├── 📊 corpus.csv                              ← corpus limpio (105 artículos)
 ├── 📄 informe_completo.docx                   ← informe técnico detallado
+├── 📈 grafico1_evolucion_temporal.png
+├── 📈 grafico2_citaciones.png
+├── 📈 grafico3_acceso_abierto.png
+├── 📈 grafico4_año_citaciones.png
+├── 📈 grafico5_top_topics.png
+├── 📈 grafico6_paises.png
+├── 📈 grafico7_niveles.png
+├── 📈 grafico8_poblaciones.png
 └── 📝 README.md
 ```
 
