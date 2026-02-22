@@ -1,142 +1,102 @@
-# 📚 Revisión Sistemática de Literatura
-## Capital Científico e Identidad Científica (2006–2025)
+# 🔬 Capital Científico e Identidad Científica
+### Revisión Sistemática de Literatura · 2007–2025
 
-**Autora:** Deisy Viviana Hurtado Vega  
-**Fecha:** Febrero 2026  
-**Contexto:** Prueba técnica para convocatoria de Investigadora — Instituto UNNO, Parque Científico de Innovación Social, UNIMINUTO
+> **¿Cómo se ha conceptualizado el capital científico y la identidad científica en la literatura académica entre 2006 y 2025, y qué implicaciones se derivan para la equidad educativa y la innovación social?**
 
 ---
 
-## 🎯 Descripción del proyecto
+## 📌 Descripción del proyecto
 
-Este proyecto implementa una **revisión sistemática de literatura** sobre Capital Científico (*Scientific Capital*) e Identidad Científica (*Scientific Identity*), abarcando publicaciones entre 2006 y 2025. El análisis combina técnicas bibliométricas con síntesis crítica cualitativa para mapear tendencias globales, identificar vacíos temáticos y detectar poblaciones subrepresentadas en la literatura académica.
+Revisión sistemática bibliométrica realizada sobre literatura académica indexada en **OpenAlex**, orientada a mapear la producción global sobre capital científico e identidad científica, identificar tendencias y detectar vacíos temáticos, poblacionales y territoriales — con especial atención al contexto latinoamericano y colombiano.
 
-La pregunta de investigación se formuló con el enfoque **PICo** y el análisis revela una concentración anglosajona del campo, una aceleración notable de publicaciones desde 2021, y una ausencia significativa de producción latinoamericana —especialmente colombiana— que representa una oportunidad estratégica para instituciones de innovación social.
+Este proyecto fue desarrollado como prueba técnica para aspirar al cargo de Investigadora en el **Instituto UNNO – Parque Científico de Innovación Social (UNIMINUTO)** en febrero de 2026.
+
+---
+
+## 🛠️ Herramientas y tecnologías
+
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C9BE8?style=flat)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+![OpenAlex](https://img.shields.io/badge/Fuente-OpenAlex_API-brightgreen?style=flat)
+
+---
+
+## 📊 Hallazgos principales
+
+| Indicador | Resultado |
+|---|---|
+| 📄 Artículos analizados | 105 |
+| 📅 Período cubierto | 2007 – 2025 |
+| 🌍 Países representados | 30+ |
+| 🔓 Acceso abierto | 67,6% |
+| 📈 Crecimiento último quinquenio | 45,7% de toda la producción en 2021–2025 |
+| 🇨🇴 Artículos desde Colombia | 1 |
+
+### 📈 Tendencia temporal
+La producción académica muestra **dos momentos de ruptura**: un crecimiento moderado entre 2007 y 2018, y una aceleración notable desde 2019. Los últimos dos años concentran la mayor actividad: **13 artículos en 2024** y **19 en 2025**, lo que indica que el campo está en plena fase de consolidación.
+
+### 🌎 Distribución geográfica
+| País | Afiliaciones |
+|---|---|
+| 🇺🇸 Estados Unidos | 35 |
+| 🇪🇸 España | 17 |
+| 🇧🇷 Brasil | 16 |
+| 🇮🇩 Indonesia | 12 |
+| 🇸🇪 Suecia | 13 |
+| 🇨🇴 Colombia | 1 |
+
+El predominio norteamericano existe, pero es menos abrumador que en otras áreas del conocimiento. La presencia de España y Brasil señala que el campo **está construyendo voces propias en el mundo hispanohablante y lusófono**.
+
+### 🏷️ Temas dominantes
+1. Career Development and Diversity (n=7)
+2. Educational Research and Science Teaching (n=5)
+3. Science Education and Pedagogy (n=4)
+4. Education and Critical Thinking Development (n=4)
+5. Science, Technology, and Education in Latin America (n=3)
+
+### 🔍 Vacíos identificados
+- **Primera infancia:** solo 2 artículos abordan este nivel educativo, a pesar de que la evidencia señala que las actitudes hacia la ciencia se forman desde edades tempranas.
+- **Colombia y América Latina:** subrepresentados estructuralmente en un campo que conceptualmente les concierne de forma directa.
+- **Poblaciones vulnerables:** solo 12 artículos abordan género, 4 minorías étnicas y 2 contextos de pobreza.
 
 ---
 
 ## 📁 Estructura del repositorio
 
 ```
-📦 repositorio
- ┣ 📓 analisis_openalex_completo.ipynb     # Notebook principal: limpieza, EDA y visualizaciones
- ┣ 📓 VISUALIZACIONES_COMPLEMENTO.ipynb   # Notebook complementario: distribución geográfica, 
- ┃                                         # niveles educativos y poblaciones subrepresentadas
- ┣ 📄 corpus_limpio.csv                    # Dataset depurado (115 artículos, 29 variables)
- ┣ 📄 corpus.csv                           # Dataset original exportado desde OpenAlex (118 registros)
- ┗ 📄 README.md                            # Este archivo
+📁 capital-cientifico-identidad-cientifica/
+├── 📓 analisis_bibliometrico_completo.ipynb   ← análisis y visualizaciones
+├── 📊 corpus.csv                              ← corpus limpio (105 artículos)
+├── 📄 informe_completo.docx                   ← informe técnico detallado
+└── 📝 README.md
 ```
 
 ---
 
-## 🔬 Metodología
+## 🔎 Metodología
 
-### Fuente de datos
-Los datos fueron recuperados mediante la **API de OpenAlex**, una infraestructura científica abierta que indexa más de 250 millones de trabajos académicos. Se eligió por su cobertura multilingüe, acceso libre y riqueza de metadatos (FWCI, afiliaciones, estado de acceso abierto).
+La búsqueda se realizó con el enfoque **PICo** (Population, Interest, Context) usando la API de OpenAlex con operadores booleanos en inglés y español:
 
-### Ecuación de búsqueda
 ```
-(("scientific capital" OR "capital científico") OR 
- ("scientific identity" OR "identidad científica")) 
+("scientific capital" OR "capital científico") OR
+("scientific identity" OR "identidad científica")
 AND ("education" OR "educación")
 ```
-Filtros: artículos · 2006–2025 · inglés y español
 
-### Corpus final
-- **118 registros** recuperados → **3 duplicados eliminados** → **115 artículos** analizados
-- Período: 2007–2025
-- Formato: CSV con 29 variables (título, autores, año, fuente, resumen, citas, DOI, FWCI, acceso abierto, afiliaciones, tópicos)
+**Filtros aplicados:** rango temporal 2006–2025 · tipo de documento: artículo
+
+El análisis computacional incluyó limpieza de datos (deduplicación, tratamiento de nulos, exclusión de registros no pertinentes), análisis exploratorio y ocho visualizaciones interpretadas.
 
 ---
 
-## 🛠️ Herramientas y tecnologías
+## 💡 Reflexión final
 
-| Herramienta | Uso |
-|---|---|
-| `Python 3` | Lenguaje principal |
-| `pandas` | Manipulación y limpieza de datos |
-| `numpy` | Operaciones numéricas |
-| `matplotlib` | Visualizaciones |
-| `seaborn` | Visualizaciones estadísticas |
-| `Jupyter Notebook` | Entorno de análisis reproducible |
-| `OpenAlex API` | Fuente de datos bibliográficos |
+La ausencia de Colombia en este corpus no es un dato menor: **es un llamado a la acción**. Para un país con desafíos estructurales en el acceso a la ciencia, y con instituciones comprometidas con la equidad educativa, existe una oportunidad concreta de producir literatura académica situada, contextualizada y con impacto real en las comunidades.
 
 ---
 
-## 📊 Contenido de los notebooks
-
-### `analisis_openalex_completo.ipynb`
-Notebook principal con el flujo completo de análisis:
-
-1. **Carga de datos** — Inspección estructural del dataset (118 × 29)
-2. **Limpieza y preparación**
-   - Análisis de valores nulos por columna
-   - Detección y eliminación de duplicados (n=3)
-   - Corrección de tipos de datos
-   - Imputación: columnas con >80% nulos eliminadas; texto → "No especificado"; numéricos → mediana
-3. **Análisis exploratorio (EDA)**
-   - Estadísticas descriptivas generales
-   - Distribución temporal de publicaciones
-   - Análisis de citaciones e impacto (FWCI promedio: 3.23)
-   - Análisis de acceso abierto (diamond, gold, green, bronze, closed)
-   - Top revistas y fuentes de publicación
-   - Análisis de tópicos de investigación
-4. **Visualizaciones** (5 gráficos interpretados)
-   - Evolución temporal de publicaciones por año
-   - Distribución de citaciones (histograma + boxplot)
-   - Estado de acceso abierto
-   - Relación año-citaciones (doble eje Y)
-   - Top 12 tópicos de investigación
-5. **Exportación** del corpus depurado como `corpus_limpio.csv`
-
-### `VISUALIZACIONES_COMPLEMENTO.ipynb`
-Notebook de verificación y análisis complementario que profundiza en los hallazgos críticos del informe:
-
-- **Gráfico 1 — Distribución geográfica:** Concentración por país de afiliación y ausencia de Colombia (1 artículo: *"Democratizing STEM"*, 2025)
-- **Gráfico 2 — Niveles educativos:** Vacío en primera infancia (solo 2 artículos mencionan *early childhood* o *preschool*)
-- **Gráfico 3 — Poblaciones subrepresentadas:** Frecuencia de grupos como mujeres/género, minorías étnicas, docentes en formación, primera infancia y comunidades indígenas en los abstracts
-
----
-
-## 📈 Hallazgos principales
-
-| Hallazgo | Dato |
-|---|---|
-| Total artículos analizados | 115 |
-| Período cubierto | 2007–2025 |
-| FWCI promedio del corpus | 3.23 |
-| País dominante | EE.UU. (66 afiliaciones) |
-| Aceleración reciente | 52 artículos en 2021–2025 (45.2% del total) |
-| Acceso abierto | 64.4% del corpus |
-| Colombia en el corpus | 1 artículo (0.9%) |
-| Artículos sobre primera infancia | 2 de 115 (1.7%) |
-
----
-
-## ⚠️ Nota de precisión metodológica
-
-Durante la revisión final se identificaron pequeñas discrepancias entre el informe narrativo y el CSV definitivo, originadas porque algunos cálculos se realizaron sobre la versión intermedia del dataset (118 registros, antes de eliminar los 3 duplicados). Los valores correctos corresponden al archivo `corpus_limpio.csv` (115 registros). Esta discrepancia fue documentada y reportada de forma transparente como parte del compromiso con el rigor y la reproducibilidad del proceso.
-
----
-
-## 📝 Cómo reproducir el análisis
-
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/Deisyviviana80/Revisi-n-Sistem-tica-Capital-Cient-fico-e-Identidad-Cient-fica-2006-2025-/tree/main
-# 2. Instalar dependencias
-pip install pandas numpy matplotlib seaborn jupyter
-
-# 3. Ejecutar en orden
-jupyter notebook analisis_openalex_completo.ipynb
-jupyter notebook VISUALIZACIONES_COMPLEMENTO.ipynb
-```
-
-> ⚠️ Ejecutar primero `analisis_openalex_completo.ipynb` ya que genera el archivo `corpus_limpio.csv` que usa el segundo notebook.
-
----
-
-## 📬 Contacto
-
-**Deisy Viviana Hurtado Vega**  
-[LinkedIn](https://www.linkedin.com/in/deisyhurtado-analistadedatos/)
+*Desarrollado por **Deisy Viviana Hurtado Vega** · Febrero 2026*
+*Datos: [OpenAlex](https://openalex.org) · Licencia: MIT*
