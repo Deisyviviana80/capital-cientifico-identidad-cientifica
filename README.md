@@ -102,7 +102,9 @@ El análisis computacional incluyó limpieza de datos (deduplicación, tratamien
 
 ## 💡 Reflexión final
 
-La ausencia de Colombia en este corpus no es un dato menor: **es un llamado a la acción**. Para un país con desafíos estructurales en el acceso a la ciencia, y con instituciones comprometidas con la equidad educativa, existe una oportunidad concreta de producir literatura académica situada, contextualizada y con impacto real en las comunidades.
+La ausencia de Colombia en este corpus no es un dato menor: **es un llamado a la acción**. Pero el vacío no es solo geográfico. La literatura ha dejado fuera de manera sistemática a las poblaciones que más necesitan ser nombradas: la primera infancia, etapa en la que las actitudes hacia la ciencia se forman de manera determinante; las mujeres y minorías étnicas, que siguen subrepresentadas tanto como sujetos de investigación como productoras de conocimiento; y los contextos de pobreza, donde las barreras para el capital científico son más profundas y más invisibles.
+
+Para un país como Colombia, con desafíos estructurales en el acceso a la ciencia y con instituciones comprometidas con la equidad educativa, este triple vacío —territorial, poblacional y etario— no es una limitación del campo: **es una oportunidad concreta de liderazgo**. Existe un espacio abierto para producir literatura académica situada, que hable desde y para las comunidades que la ciencia todavía no ha sabido ver.
 
 ---
 
